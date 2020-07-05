@@ -1,0 +1,58 @@
+.card {
+  flex-basis: 0 0 15.6rem;
+  width: 15.6rem;
+  color: white;
+  background: rgba(32, 33, 36);
+  border: 0.1rem solid rgba(80, 80, 80, .6);
+  border-radius: 0.3rem;
+  margin: 0.5em;
+  padding: 0.6em;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.55), 2px 2px rgba(0, 0, 0, 0.55);
+  transition: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.card:hover {
+  box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.55), -1px 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.card-title {
+  padding: 0.2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(100, 100, 100, .5);;
+}
+
+.card-content, .card-footer {
+  margin: 0.3em auto;
+  padding: 0.2em;
+}
+
+.card-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  max-width: 15rem;
+  max-height: 7rem;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.card-footer {
+  margin-left: 0.2em;
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  z-index: 5;
+  transition: 1s ease-in-out;
+}

@@ -1,0 +1,6 @@
+<div class="container">
+  <app-note-item *ngFor="let note of noteList; let i=index"
+  [index]="i"  [note]="note"></app-note-item>
+  <app-note-edit *ngIf="editMode"></app-note-edit>
+</div>
+

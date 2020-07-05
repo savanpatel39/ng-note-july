@@ -1,0 +1,114 @@
+.card {
+  display: flex;
+  flex-basis: 0 0 45%;
+  flex-direction: row;
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  height: 40%;
+  width: 45%;
+  color: white;
+  background: rgba(32, 33, 36);
+  border: 0.1rem solid rgba(80, 80, 80, .6);
+  border-radius: 1.5rem;
+  margin: 1em auto;
+  padding: 1em;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.55),0 6px 6px rgba(0,0,0,0.55);
+  align-items: center;
+  align-self: center;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.btn-add-note {
+  height: 2rem;
+  background: rgb(100, 23, 23);
+  width: 10%;
+  margin: 1em auto;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 2rem;
+  transition: 0.1s;
+  transition-timing-function: ease-in;
+  box-shadow: -1px 1px rgba(0, 0, 0, 0.55);
+}
+
+.btn-add-note:hover {
+  cursor: pointer;
+  box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.55), -1px 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.btn-active, .btn-disabled {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  width: 6rem;
+  border: none;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 0.15rem solid limegreen;
+  float: right;
+  box-shadow: 1px 1px rgba(0,0,0,0.22),  3px 3px rgba(0,0,0,0.22);
+}
+
+.btn-active {
+  color: limegreen;
+  background: rgba(32, 33, 36);
+  border: 0.15rem solid limegreen;
+  transition: 0.2s;
+  transition-timing-function: ease-in;
+  box-shadow: 1px 1px rgba(0,0,0,0.22),  3px 3px rgba(0,0,0,0.22);
+}
+
+.btn-disabled {
+  background: rgba(60, 63, 67, 1);
+  color: rgba(152, 153, 156, .9);;
+  border: 0.16rem solid rgba(152, 153, 156, .9);
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.btn-active:hover {
+  cursor: pointer;
+  box-shadow: -1px 5px 5px rgba(0, 0, 0, 0.55), -1px 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.form-container {
+  width: 100%;
+}
+
+input[type="text"], textarea {
+  -webkit-appearance: none;
+  border: none;
+  padding: 0.2em;
+  color: white;
+  align-self: center;
+}
+
+input[type="text"] {
+  margin-left: auto 0.3em;
+  background: rgba(32, 33, 36, 0);
+  font-size: 1.2em;
+  font-weight: 400;
+  width: 98%;
+}
+
+input[type="text"]:active {
+  -webkit-appearance: none;
+  border: none;
+}
+
+::placeholder {
+  color: rgba(152, 153, 156, 1);
+}
+
+textarea {
+  background: rgba(42, 43, 46, 0);
+  margin-top: 1em;
+  width: 100%;
+  height: 9.5rem;
+  font-size: 1.2em;
+}
+

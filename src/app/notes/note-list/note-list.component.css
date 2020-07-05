@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  margin: 1em auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

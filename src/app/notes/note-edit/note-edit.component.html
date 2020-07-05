@@ -1,0 +1,42 @@
+<div class="note-edit-container">
+  <form class="form-container"
+    [formGroup]="editNoteForm"
+    (ngSubmit)="onSaveClicked()">
+    <div class="form-body">
+      <div class="form-field">
+        <input
+          class="form-input"
+          type="text"
+          name="note-title"
+          formControlName="title"
+          placeholder="Title"/>
+      </div>
+      <div class="form-field">
+        <textarea
+          class="form-input"
+          type="text"
+          name="note-content"
+          formControlName="body"
+          placeholder="Write your note here"
+          required>
+        </textarea>
+        <span style="margin-top: 0.5em; color: red; font-size: 0.9rem; font-weight: 100;"
+        *ngIf="!editNoteForm.get('body').valid && !editNoteForm.get('body').untouched">
+          To update note, note content is require!
+        </span>
+      </div>
+    </div>
+    <div class="form-footer">
+      <div class="form-field">
+          <label
+          class="form-label"
+          name="note-timestamp">
+            Timestamp
+          </label>
+      </div>
+      <div>
+        <button [className]="editNoteForm.valid ? 'btn-active' : 'btn-disabled'" type="submit" [disabled]="!editNoteForm.valid">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

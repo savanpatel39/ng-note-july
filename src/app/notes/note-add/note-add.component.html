@@ -1,0 +1,32 @@
+<div class="btn-add-note" (click)="showAddNoteForm()">
+Add Note
+</div>
+<div class="card" *ngIf="!hidden">
+  <form [formGroup]="addNoteForm"  class="form-container" (ngSubmit)="saveNote()">
+    <div class="note-title">
+      <input
+        class="form-input"
+        type="text"
+        name="note-title"
+        formControlName="title"
+        placeholder="Title"
+      />
+    </div>
+    <div class="note-body">
+      <textarea
+        class="form-input"
+        type="text"
+        name="note-content"
+        formControlName="body"
+        placeholder="Write your note here"
+        required
+      >
+      </textarea>
+      <span style="margin-top: 0.5em; color: red; font-size: 0.9rem; font-weight: 100;"
+        *ngIf="!addNoteForm.get('body').valid && !addNoteForm.get('body').untouched">
+          To update note, note content is require!
+        </span>
+      <button [className]="addNoteForm.valid ? 'btn-active' : 'btn-disabled'" type="submit" [disabled]="!addNoteForm.valid">Save</button>
+    </div>
+  </form>
+</div>

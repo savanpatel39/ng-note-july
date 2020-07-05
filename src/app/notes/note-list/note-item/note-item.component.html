@@ -1,0 +1,14 @@
+<a href="#" (click)="changeEditMode()">
+  <div class="card">
+    <div *ngIf="note.title" class="card-title">
+      {{ note.title }}
+    </div>
+    <div class="card-content">
+      {{ note.body }}
+    </div>
+    <div class="card-footer">
+      {{ note.timeStamp | date:'LLL d, yyyy - h:mm a' }}
+    </div>
+  </div>
+</a>
+
