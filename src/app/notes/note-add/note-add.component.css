@@ -63,7 +63,7 @@
 
 .btn-disabled {
   background: rgba(60, 63, 67, 1);
-  color: rgba(152, 153, 156, .9);;
+  color: rgba(152, 153, 156, .9);
   border: 0.16rem solid rgba(152, 153, 156, .9);
   transition: 0.2s;
   transition-timing-function: ease-out;

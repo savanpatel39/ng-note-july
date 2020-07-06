@@ -1,1 +1,49 @@
-<p>auth works!</p>
+<div class="container">
+  <form class="login-signup-form" [formGroup]="loginSignupForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+    <div class="form-field form-banner">
+      <div class="banner-text">
+        {{ 'Login / Signup' }}
+      </div>
+    </div>
+    <div class="form-field email">
+      <div class="form-field form-label">
+        <label>Email</label>
+      </div>
+      <div class="form-field form-input">
+        <input type="email" name="email" formControlName="email"/>
+        <br/>
+        <span *ngIf="!loginSignupForm.get('email').valid && loginSignupForm.get('email').touched"
+        class="err-msg">Enter a valid email!</span>
+      </div>
+    </div>
+    <div class="form-field password">
+      <div class="form-field form-label">
+        <label>Password</label>
+      </div>
+      <div class="form-field form-input">
+        <input type="password" name="password" [(ngModel)]="pwd" formControlName="password"/>
+        <br/>
+        <span *ngIf="!loginSignupForm.get('password').valid && loginSignupForm.get('password').touched"
+         class="err-msg">Enter a password with minimum 8 characters</span>
+      </div>
+    </div>
+    <div *ngIf="true" class="form-field confirm-password">
+      <div class="form-field form-label">
+        <label>Confirm Password</label>
+      </div>
+      <div class="form-field form-input">
+        <input type="password" name="confirm-password" formControlName="cnfrmPassword"/>
+        <br/>
+        <span *ngIf="!loginSignupForm.get('cnfrmPassword').valid && loginSignupForm.get('cnfrmPassword').touched"
+         class="err-msg">Enter a password with minimum 8 characters</span>
+         <span *ngIf="loginSignupForm.get('cnfrmPassword').errors['nomatch']"
+         class="err-msg">Password does not match!</span>
+      </div>
+    </div>
+    <div class="form-field">
+      <button [className]="loginSignupForm.valid ? ['form-field btn-active'] : ['form-field btn-disabled']" type="submit" [disabled]="!loginSignupForm.valid">{{ 'Login/Sign up' }}</button>
+    </div>
+    </div>
+  </form>
+</div>

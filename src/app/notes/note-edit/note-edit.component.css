@@ -31,7 +31,6 @@ input[type="text"], textarea {
   -moz-appearance:    none;
   color: white;
   background: rgba(32, 33, 36, 0.5);
-  /* background: rgba(52, 53, 56, .9); */
   border: none;
   border-radius: 0.5rem;
   width: 100%;
