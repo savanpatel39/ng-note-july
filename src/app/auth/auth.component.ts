@@ -17,7 +17,7 @@ export class AuthComponent implements OnInit {
     this.loginSignupForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
-      cnfrmPassword: new FormControl(null, [Validators.required, Validators.minLength(6), this.matchPassword.bind(this)] )
+      cnfrmPassword: new FormControl(null, [Validators.required, this.matchPassword.bind(this)] )
     });
   }
 
@@ -26,7 +26,7 @@ export class AuthComponent implements OnInit {
       console.log('password does not match');
       return { nomatch : true };
     }
-    return { match : true };
+    return { nomatch : false };
   }
 
   onSubmit() {
