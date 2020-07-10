@@ -28,7 +28,7 @@ export class AuthComponent implements OnInit {
     }
     return { nomatch : false };
   }
-
+// ADDING THIS TO TEST GITHUB COMMIT
   onSubmit() {
     //
     const email = this.loginSignupForm.value.email;
