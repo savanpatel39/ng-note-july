@@ -20,7 +20,7 @@ export class AuthComponent implements OnInit {
       cnfrmPassword: new FormControl(null, [Validators.required, this.matchPassword.bind(this)] )
     });
   }
-
+// To confirm password if it is completed or not
   matchPassword(control: FormControl): {[s: string]: boolean} {
     if ( this.pwd && control.value !== this.pwd) {
       console.log('password does not match');
